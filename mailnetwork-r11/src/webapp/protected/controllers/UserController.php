@@ -382,8 +382,6 @@ class UserController extends Controller
                                     'text/html');
 
             $message->addTo($customer_model->bilemail);
-            $message->addBcc("psam@saipeople.com");
-            $message->addBcc("mailnetwork@globalia.ca");
             $message->addFrom(Yii::app()->params['adminEmail']);
             $message->setSubject("Welcome to Mailnetwork!");
             Yii::app()->mail->send($message);
