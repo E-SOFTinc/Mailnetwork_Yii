@@ -363,10 +363,7 @@ class UserController extends Controller
                 $message->setBody(array('include'=>'new-signup.php', 'customer'=>$customer_model, 'commande'=>$commande_model, 'order_totals'=>$order_totals), 'text/html');
 
             // TODO: VERY IMPORTANT TO REMOVE THIS BCC ONCE YOU HIT PRODUCTION!
-			$message->addTo(Yii::app()->params['adminEmail']);
-            $message->addBcc("psam@saipeople.com");
-            $message->addBcc("imfnmail@yahoo.com");
-            $message->addBcc("mailnetwork@globalia.ca");            
+			$message->addTo(Yii::app()->params['adminEmail']);            
             $message->addFrom(Yii::app()->params['adminEmail']);
             $message->setSubject("New User Signup");
             Yii::app()->mail->send($message);
