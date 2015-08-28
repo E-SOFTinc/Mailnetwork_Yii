@@ -1,0 +1,3 @@
+/webapp/uploads/
+/webapp/protected/config/
+/webapp/protected/runtime/*.log.*

@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+
+  RewriteCond %{REQUEST_URI} !(css|images|js|assets)
+  RewriteRule ^(.*)$ webapp/index.php/$1
+
+  RewriteCond %{REQUEST_URI} (css|images|js|assets)
+  RewriteRule ^(.*)$ webapp/$1
+
+# RewriteRule ^(/)?$ webapp/index.php [L]
+</IfModule>

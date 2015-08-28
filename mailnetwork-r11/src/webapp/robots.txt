@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Disallow: /upload/
+Sitemap: http://mailnetwork.com/sitemap.xml
+
